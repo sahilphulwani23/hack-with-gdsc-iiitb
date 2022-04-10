@@ -189,7 +189,7 @@ void search()
             gotoxy(10,7);
             printf("Name : %s",data.name);
             gotoxy(10,8);
-            printf("Mobile Number : %.1f",data.CGPA);
+            printf("CGPA : %.1f",data.CGPA);
             gotoxy(10,9);
             printf("Roll No : %d",data.rollno);
             gotoxy(10,10);
@@ -221,7 +221,6 @@ void modify(){
         printf("Error opening file");
         exit(1);
     }
-    rewind(fp);
     fflush(stdin);
     while(fread(&data,sizeof(data),1,fp) == 1)
     {
@@ -230,7 +229,7 @@ void modify(){
             printf("Enter name: ");
             gets(data.name);
             gotoxy(10,8);
-            printf("Enter mobile number : ");
+            printf("Enter CGPA : ");
             scanf("%f",&data.CGPA);
             gotoxy(10,9);
             printf("Enter roll no : ");
